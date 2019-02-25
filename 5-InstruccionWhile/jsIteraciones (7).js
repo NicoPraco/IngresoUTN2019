@@ -4,16 +4,19 @@ function Mostrar() {
 	var acumulador = 0;
 	var respuesta = "si";
 
-	while (respuesta == "si") {
+	do {
 
-		num = parseInt(prompt("Ingrese una cantidad de numeros que asi desee."));
+		num = parseInt(prompt("Ingrese un numero."));
 
 		acumulador = acumulador + num;
 
-		contador++
+		respuesta = prompt("¿Quiere ingresar otro número?").toLowerCase();
+
+		contador = contador + 1;
 
 	}
 
+	while (respuesta == "si");
 
 	document.getElementById("suma").value = acumulador;
 	document.getElementById("promedio").value = acumulador / contador;
